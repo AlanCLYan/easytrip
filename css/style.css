@@ -256,3 +256,45 @@ textarea { resize: vertical; }
   .topbar, .tabs, .head-actions, .tl-actions, .back, .btn { display: none !important; }
   body { background: #fff; }
 }
+
+/* ── 住宿交通 ── */
+.stack { display: grid; gap: 12px; }
+.booking-title { display: flex; gap: 12px; align-items: flex-start; min-width: 0; }
+.booking-title h3 { word-break: break-word; }
+.booking-icon {
+  flex: none; width: 40px; height: 40px; border-radius: 12px;
+  display: grid; place-items: center; font-size: 1.2rem; background: var(--primary-weak);
+}
+.code {
+  display: inline-flex; align-items: center; gap: 10px; margin-top: 10px;
+  padding: 6px 12px; border-radius: 10px; cursor: pointer;
+  border: 1px dashed var(--primary); background: var(--primary-weak); color: var(--text); font: inherit;
+}
+.code small { color: var(--muted); font-size: .75rem; }
+.code b { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 1.05rem; letter-spacing: .06em; }
+.booking .tl-place { display: block; margin-top: 8px; }
+
+/* ── 行前清單 ── */
+.progress { height: 8px; border-radius: 999px; background: var(--line); overflow: hidden; margin: -4px 0 14px; }
+.progress div { height: 100%; background: var(--primary); border-radius: 999px; transition: width .3s; }
+.quick-add { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; padding: 10px; margin-bottom: 16px; }
+.quick-add select { width: auto; }
+@media (max-width: 520px) {
+  .quick-add { grid-template-columns: 1fr auto; }
+  .quick-add input { grid-column: 1 / -1; }
+  .quick-add select { width: 100%; }
+}
+.check-group { margin-bottom: 16px; }
+.check-group h3 { font-size: .95rem; margin: 0 0 6px 2px; }
+.check-list { list-style: none; margin: 0; padding: 4px 0; }
+.check-row {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 10px 6px 14px; border-bottom: 1px solid var(--line);
+}
+.check-row:last-child { border-bottom: 0; }
+.check-row label { flex: 1; display: flex; align-items: center; gap: 10px; min-width: 0; cursor: pointer; padding: 4px 0; }
+.check-row input[type=checkbox] { width: 20px; height: 20px; flex: none; accent-color: var(--primary); }
+.check-text { word-break: break-word; }
+.check-row.is-done .check-text { text-decoration: line-through; color: var(--muted); }
+.who-done { flex: none; font-size: .75rem; }
+.row-actions { display: flex; flex: none; }

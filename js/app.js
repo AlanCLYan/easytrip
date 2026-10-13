@@ -257,7 +257,7 @@ const TabCtx = {
       canEdit: Api.canEdit && !Api.offline,
       async add(sheet, row) {
         const r = await Api.add(sheet, Object.assign({}, row, { tripId: data.trip.id }));
-        data[sheet].push(r);
+        (data[sheet] = data[sheet] || []).push(r);
         Api.saveTripCache(data);
         return r;
       },
